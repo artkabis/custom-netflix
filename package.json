@@ -10,9 +10,10 @@
     "scripts": {
         "build": "cd client && npm run build",
         "start-client": "cd client && npm run start",
+        "install-server": "npm install",
         "install-client": "cd client && npm install",
         "heroku-postbuild": "npm run install-client && npm run build",
-        "server": "npm install && node index.js",
+        "server": "node index.js",
         "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
         "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start-client\""
     },
@@ -24,6 +25,7 @@
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^5.13.2",
         "nodemon": "^2.0.9",
+        "express": "^4.17.1",
         "path": "^0.12.7"
     }
 }
