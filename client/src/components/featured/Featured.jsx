@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './featured.scss';
 import { Link } from 'react-router-dom';
+import constructUrl from '../../authContext/ConstructUrl';
 import {
   PlayArrow,
   InfoOutlined,
@@ -28,8 +29,12 @@ export default function Featured({ type, setGenre }) {
         setDefaultType(type);
       }
       try {
+        console.log(
+          'new random movies url >> ',
+          constructUrl(`movies/random?type=${defaultType}`)
+        );
         const res = await axios.get(
-          `/movies/random?type=${defaultType}`,
+          constructUrl(`movies/random?type=${defaultType}`),
           {
             headers: {
               token:
