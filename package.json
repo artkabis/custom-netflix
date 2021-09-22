@@ -18,6 +18,12 @@
     },
     "dependencies": {
         "concurrently": "^6.0.2",
+        "cors": "^2.8.5",
+        "crypto-js": "^4.0.0",
+        "dotenv": "^10.0.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.13.2",
+        "nodemon": "^2.0.9",
         "path": "^0.12.7"
     }
 }
