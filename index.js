@@ -27,7 +27,7 @@ mongoose
     console.error(err);
   });
 
-  
+
 //   var corsOptions = {
 //   origin: 'http://example.com',
 //   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
@@ -63,7 +63,7 @@ app.use('/api/lists', listRoute);
   });
 
 }
-const port = process.env.PORT || 8800;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log('Backend server is running at : ', port);
 });
