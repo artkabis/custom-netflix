@@ -1,0 +1,139 @@
+@import "../../app.scss";
+
+.featured {
+  height: 76vh;
+  position: relative;
+
+  .category {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    select {
+      cursor: pointer;
+      background-color: var(--main-color);
+      border: 1px solid white;
+      color: white;
+      margin-left: 20px;
+      padding: 5px;
+    }
+  }
+
+  #genre {
+    z-index: 2;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .info {
+    width: 35%;
+    position: absolute;
+    left: 50px;
+    bottom: 60px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 40vw;
+      margin-top: 100px;
+    }
+
+    .desc {
+      margin: 20px 0px;
+
+      @include mobile {
+        width: 60vw;
+      }
+    }
+
+    .buttons {
+      display: flex;
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 500;
+        margin-right: 10px;
+        cursor: pointer;
+
+        &.play {
+          background-color: white;
+          color: var(--main-color);
+
+          a {
+            text-decoration: none;
+            color: var(--main-color);
+          }
+        }
+
+        &.more {
+          background-color: gray;
+          color: white;
+        }
+
+        span {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .bigInfos {
+    position: fixed;
+    display: flex;
+    padding-left: 50px;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    background: rgb(29, 28, 28);
+    color: white;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px black;
+    z-index: 3;
+
+    .itemInfo {
+      display: flex;
+      flex-direction: column;
+      margin: 30px;
+      padding: 30px;
+      background: #333;
+    }
+
+    .itemInfoTop {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: space-around;
+      padding: 15px 0 15px;
+      background: #222;
+      margin: 0 0 15px 0;
+    }
+
+    .desc {
+      margin-top: 10%;
+    }
+
+    .genre {
+      margin: 15px 0 0 0;
+    }
+  }
+}
