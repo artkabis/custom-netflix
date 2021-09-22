@@ -12,7 +12,7 @@
         "start-client": "cd client && npm run start",
         "install-client": "cd client && npm install",
         "heroku-postbuild": "npm run install-client && npm run build",
-        "server": "node index.js",
+        "server": "npm install && node index.js",
         "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
         "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start-client\""
     },
