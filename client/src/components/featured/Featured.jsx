@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './featured.scss';
 import { Link } from 'react-router-dom';
-import constructUrl from '../../authContext/ConstructUrl';
+import constructUrl from '../../utils/ConstructUrl';
 import {
   PlayArrow,
   InfoOutlined,

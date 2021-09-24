@@ -8,7 +8,7 @@ import {
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import constructUrl from '../../authContext/ConstructUrl';
+import constructUrl from '../../utils/ConstructUrl';
 
 export default function ListItem({ index, item }) {
   const [isHovered, setIsHovered] = useState(false);
