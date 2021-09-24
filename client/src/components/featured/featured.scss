@@ -107,33 +107,50 @@
     box-shadow: 0 0 10px black;
     z-index: 3;
 
+    @include mobile {
+      width: 55%;
+    }
+
+    video {
+      min-width: 80%;
+      margin-left: 50px;
+    }
+
     .itemInfo {
       display: flex;
       flex-direction: column;
-      margin: 30px;
-      padding: 30px;
+      padding: 30px 15px;
       background: #333;
-    }
+      min-width: 20%;
+      margin-right: 50px;
 
-    .itemInfoTop {
-      display: flex;
-      justify-content: space-around;
-    }
+      .icons {
+        display: flex;
+        justify-content: space-around;
+        padding: 15px 0 15px;
+        background: #222;
+        margin: 0 0 15px 0;
+        width: 100%;
+      }
 
-    .icons {
-      display: flex;
-      justify-content: space-around;
-      padding: 15px 0 15px;
-      background: #222;
-      margin: 0 0 15px 0;
-    }
+      .itemInfoTop {
+        display: flex;
+        justify-content: space-around;
 
-    .desc {
-      margin-top: 10%;
-    }
+        .limite {
+          margin-right: 10px;
+          background: #222;
+          padding: 2px;
+        }
+      }
 
-    .genre {
-      margin: 15px 0 0 0;
+      .desc {
+        margin-top: 10%;
+      }
+
+      .genre {
+        margin: 15px 0 0 0;
+      }
     }
   }
 }
