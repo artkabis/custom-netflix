@@ -22,7 +22,6 @@ export default function Featured({ type, setGenre }) {
 
   useEffect(() => {
     const getRandomContent = async () => {
-      console.log('random content type ', type);
       if (!type) {
         setDefaultType('movies');
       } else {
@@ -54,7 +53,6 @@ export default function Featured({ type, setGenre }) {
     setIsOpenInfos(!isOpenInfos);
     console.log('click open info');
   };
-  console.log('content > ', content, ' id > ', content._id);
   return (
     <div className="featured">
       {type && (

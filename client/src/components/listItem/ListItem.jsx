@@ -34,7 +34,6 @@ export default function ListItem({ index, item }) {
     };
     getMovie();
   }, [item]);
-  console.log('Item de ListItem : ', item);
 
   return (
     <Link to={{ pathname: '/watch', movie: movie }}>

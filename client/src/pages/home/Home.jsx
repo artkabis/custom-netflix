@@ -3,6 +3,7 @@ import Featured from '../../components/featured/Featured';
 import './home.scss';
 import List from '../../components/list/List';
 import { useEffect, useState } from 'react';
+import constructUrl from '../../authContext/ConstructUrl';
 import axios from 'axios';
 
 const Home = ({ type }) => {
@@ -20,7 +21,7 @@ const Home = ({ type }) => {
       console.log('type generate :', t, '  genre  : ', g);
       var url = `lists${t}${g}`;
       try {
-        const res = await axios.get(url, {
+        const res = await axios.get(constructUrl(url), {
           headers: {
             token:
               'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
