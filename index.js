@@ -15,7 +15,6 @@ if (result.error) {
   throw result.error;
 }
 
-console.log('env parsing : ', result.parsed);
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
@@ -26,7 +25,6 @@ mongoose
   .catch((err) => {
     console.error(err);
   });
-
 
 //   var corsOptions = {
 //   origin: 'http://example.com',
@@ -55,13 +53,12 @@ app.use('/api/lists', listRoute);
 //     res.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
 //   });
 
-  if(process.env.NODE.ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, 'client', 'build')));
 
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
-
 }
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
