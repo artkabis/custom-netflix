@@ -3,7 +3,7 @@ import Featured from '../../components/featured/Featured';
 import './home.scss';
 import List from '../../components/list/List';
 import { useEffect, useState } from 'react';
-import constructUrl from '../../authContext/ConstructUrl';
+import constructUrl from '../../utils/ConstructUrl';
 import axios from 'axios';
 
 const Home = ({ type }) => {

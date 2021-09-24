@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { loginFailure, loginStart, loginSuccess } from './AuthActions';
-import constructUlr from './ConstructUrl';
+import constructUlr from '../utils/ConstructUrl';
 /*const interfaceAxios = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
 });

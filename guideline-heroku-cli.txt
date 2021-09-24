@@ -1,0 +1,20 @@
+first app push >>
+
+$ heroku login
+$ cd my-project/
+$ git init
+$ git add .
+$ git commit -am "hey this is my first commit !!!"
+$ git push heroku master
+
+
+Créer une nouvelle app >>
+
+$ heroku create --region eu
+$ heroku git:remote -a [my-project-name]
+
+Si trop du push ont été fait et qu'un message d'erreur apparait (trop de push pour ce compte), faire : 
+heroku restart
+
+
+
