@@ -107,10 +107,6 @@
     box-shadow: 0 0 10px black;
     z-index: 3;
 
-    @include mobile {
-      width: 55%;
-    }
-
     video {
       min-width: 80%;
       margin-left: 50px;
@@ -150,6 +146,45 @@
 
       .genre {
         margin: 15px 0 0 0;
+      }
+    }
+  }
+}
+
+$breakpoint-tablet: 768px;
+
+@media (min-width: $breakpoint-tablet) {
+  .bigInfos {
+    position: fixed;
+    display: flex;
+    padding-left: 50px;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    background: rgb(29, 28, 28);
+    color: white;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px black;
+    z-index: 3;
+
+    video {
+      min-width: 70%;
+      margin-left: 50px;
+    }
+
+    .itemInfo {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 15px;
+      background: #333;
+      min-width: 30%;
+      margin-right: 50px;
+
+      .itemInfoTop {
+        .desc {
+          overflow-y: scroll;
+        }
       }
     }
   }
