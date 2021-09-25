@@ -1,8 +1,5 @@
 @import "../../app.scss";
 
-$breakpoint-tablet: 768px;
-$breakpoint-mobile: 560px;
-
 .featured {
   height: 76vh;
   position: relative;
@@ -69,6 +66,7 @@ $breakpoint-mobile: 560px;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
         font-size: 18px;
         font-weight: 500;
         margin-right: 10px;
@@ -99,41 +97,48 @@ $breakpoint-mobile: 560px;
   .bigInfos {
     position: fixed;
     display: flex;
-    padding-left: 50px;
+    padding: 30px;
     top: 50%;
     left: 50%;
-    width: 50%;
+    width: 50vw;
     height: 50%;
-    background: rgb(29, 28, 28);
+    background: #1d1c1c;
     color: white;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 10px black;
     z-index: 3;
+    align-content: space-between;
+    justify-content: space-between;
 
-    @media (min-width: $breakpoint-tablet) {
-      transform: translate(-50%, -50%) scale(.8);
+    @include tablet-big {
+      transform: translate(-50%, -50%) scale(0.8);
+      width: 70vw;
+      padding: 0;
+      height: auto;
     }
 
     video {
-      min-width: 80%;
-      margin-left: 50px;
+      min-width: 70%;
+      margin-left: 0;
+      background: #333;
 
-      @media (min-width: $breakpoint-tablet) {
+      @include tablet-big {
         min-width: 70%;
-        margin-left: 50px;
+        margin: 10px;
       }
     }
 
     .itemInfo {
+      position: relative;
       display: flex;
       flex-direction: column;
-      padding: 30px 15px;
+      padding: 15px;
       background: #333;
-      min-width: 20%;
-      margin-right: 50px;
+      width: 30%;
+      border-left: solid 5px #222;
 
-      @media (min-width: $breakpoint-tablet) {
-        min-width: 30%;
+      @include tablet-big {
+        min-width: 150px;
       }
 
       .icons {
@@ -143,14 +148,31 @@ $breakpoint-mobile: 560px;
         background: #222;
         margin: 0 0 15px 0;
         width: 100%;
+
+        button {
+          pointer-events: none;
+          padding: 0;
+          background: transparent;
+          border: none;
+          color: white;
+
+          svg {
+            cursor: pointer;
+            pointer-events: all;
+          }
+
+          * {
+            pointer-events: none;
+          }
+        }
       }
 
       .itemInfoTop {
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
 
-        .limite {
-          margin-right: 10px;
+        .limit {
+          margin-right: 15px;
           background: #222;
           padding: 2px;
         }
@@ -158,8 +180,10 @@ $breakpoint-mobile: 560px;
 
       .desc {
         margin-top: 10%;
+        background: #222;
+        padding: 10px;
 
-        @media (min-width: $breakpoint-tablet) {
+        @include tablet-big {
           overflow-y: scroll;
         }
       }

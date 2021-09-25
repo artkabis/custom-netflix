@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 import constructUrl from '../../utils/ConstructUrl';
 import {
   PlayArrow,
+  Pause,
   InfoOutlined,
   Add,
   ThumbUpAltOutlined,
   ThumbDownOutlined,
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 
 export default function Featured({ type, setGenre }) {
   const [isOpenInfos, setIsOpenInfos] = useState(false);
@@ -49,9 +50,17 @@ export default function Featured({ type, setGenre }) {
     };
     getRandomContent();
   }, [type, defaultType]);
+
   const openInfos = () => {
     setIsOpenInfos(!isOpenInfos);
-    console.log('click open info');
+  };
+  let toggleVideo = (elem) => {
+    let video = document.querySelector('.bigInfos video');
+    if (String(elem.className.baseVal).includes('icon-play')) {
+      video.play();
+    } else if (String(elem.className.baseVal).includes('icon-pause')) {
+      video.pause();
+    }
   };
   return (
     <div className="featured">
@@ -102,13 +111,24 @@ export default function Featured({ type, setGenre }) {
           <video src={content.trailer} autoPlay={true} loop />
           <div className="itemInfo">
             <div className="icons">
-              <PlayArrow className="icon" />
+              <button
+                className="btnPlay"
+                onClick={(e) => toggleVideo(e.target)}
+              >
+                <PlayArrow className="icon icon-play" />
+              </button>
+              <button
+                className="btnPause"
+                onClick={(e) => toggleVideo(e.target)}
+              >
+                <Pause className="icon icon-pause" />
+              </button>
               <Add className="icon" />
               <ThumbUpAltOutlined className="icon" />
               <ThumbDownOutlined className="icon" />
             </div>
             <div className="itemInfoTop">
-              <span>{content.duration}</span>
+              <span className="duration">{content.duration}</span>
               <span className="limit">+{content.limit}</span>
               <span>{content.year}</span>
             </div>

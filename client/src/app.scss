@@ -7,7 +7,14 @@
   text-decoration: none;
 }
 
-@mixin tablet {
+
+@mixin tablet-big {
+  @media (max-width: 1239px) {
+    @content;
+  }
+}
+
+@mixin tablet-little {
   @media (max-width: 768px) {
     @content;
   }

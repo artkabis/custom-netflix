@@ -4,7 +4,7 @@ import {
   Add,
   ThumbUpAltOutlined,
   ThumbDownOutlined,
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -13,10 +13,6 @@ import constructUrl from '../../utils/ConstructUrl';
 export default function ListItem({ index, item }) {
   const [isHovered, setIsHovered] = useState(false);
   const [movie, setMovie] = useState({});
-  /*const interfaceAxios = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
-  });
-  */
 
   useEffect(() => {
     const getMovie = async () => {
