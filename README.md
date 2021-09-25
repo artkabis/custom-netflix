@@ -30,6 +30,6 @@ _________________________
 
 ![Screenshot app Netflix clone](./client/public/screen-netflix-clone-full.jpg "Screenshot")
 
-### Demo : https://netflix-custom.herokuapp.com/
+### Demo : https://streaming-netflix.herokuapp.com/
 💻 Custom project to Artkabis, Sept 2021.
 
