@@ -9,10 +9,11 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const result = dotenv.config({ path: '.env' });
-
-if (result.error) {
-  throw result.error;
+if (process.env) {
+  const result = dotenv.config({ path: '.env' });
+  if (result.error) {
+    throw result.error;
+  }
 }
 
 mongoose
