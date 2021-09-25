@@ -2,10 +2,15 @@
 ## MERN Stack
 ### React / Express / MongoDB / Axios
 
-Start api (back-end) and client (font) : 
+Install api (back-end) and client (font) : 
 ```bash
 npm install
-npm start
+npm run install-client
+```
+
+Run application :
+```bash
+npm run start
 ```
 
 
