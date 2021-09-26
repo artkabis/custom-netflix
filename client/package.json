@@ -48,5 +48,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://custom-netflix.herokuapp.com/api/"
+  "proxy": "https://streaming-netflix.herokuapp.com/api/"
 }

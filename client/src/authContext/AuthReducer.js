@@ -8,7 +8,7 @@ const AuthReducer = (state, action) => {
         error: false,
       };
     case 'LOGIN_SUCCESS':
-      console.log('context LOGIN_SUCCESS');
+      console.log('context LOGIN_SUCCESS : ', action.payload);
       return {
         user: action.payload,
         isFetching: false,

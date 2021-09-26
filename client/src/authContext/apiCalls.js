@@ -8,7 +8,6 @@ import constructUlr from '../utils/ConstructUrl';
 export const login = async (user, dispatch) => {
   dispatch(loginStart());
   try {
-    console.log(constructUlr('auth/login'));
     const res = await axios.post(constructUlr('auth/login'), user);
     dispatch(loginSuccess(res.data));
   } catch (err) {
